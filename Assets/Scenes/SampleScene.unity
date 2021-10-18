@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 403564628}
   - component: {fileID: 403564629}
   m_Layer: 0
-  m_Name: Daire_0
-  m_TagString: Untagged
+  m_Name: Turkuaz
+  m_TagString: Turkuaz
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,8 +299,8 @@ GameObject:
   - component: {fileID: 1103016799}
   - component: {fileID: 1103016800}
   m_Layer: 0
-  m_Name: Daire_2
-  m_TagString: Untagged
+  m_Name: "K\u0131rm\u0131z\u0131"
+  m_TagString: "K\u0131rm\u0131z\u0131"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,8 +381,8 @@ GameObject:
   - component: {fileID: 1290724455}
   - component: {fileID: 1290724456}
   m_Layer: 0
-  m_Name: Daire_3
-  m_TagString: Untagged
+  m_Name: Mor
+  m_TagString: Mor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,6 +522,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ziplamaKuvveti: 9
+  mevcutRenk: 
+  turkuaz: {r: 0, g: 0.98118925, b: 1, a: 1}
+  sari: {r: 1, g: 0.91909254, b: 0, a: 1}
+  kirmizi: {r: 1, g: 0, b: 0.4178648, a: 1}
+  mor: {r: 0.51461506, g: 0, b: 1, a: 1}
 --- !u!212 &1640028949
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -598,8 +603,8 @@ GameObject:
   - component: {fileID: 1776504783}
   - component: {fileID: 1776504784}
   m_Layer: 0
-  m_Name: Daire_1
-  m_TagString: Untagged
+  m_Name: "Sar\u0131"
+  m_TagString: "Sar\u0131"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Turkuaz
+  - "Sar\u0131"
+  - "K\u0131rm\u0131z\u0131"
+  - Mor
   layers:
   - Default
   - TransparentFX
