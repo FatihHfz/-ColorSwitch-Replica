@@ -28,6 +28,17 @@ public class TopKontrolu : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag != mevcutRenk)
+        {
+          Debug.Log("oldu");
+          //  Destroy(gameObject);
+        }
+    
+        
+    }
+
     void RastgeleRenkBelirle()
     {
         int rastgeleSayi = Random.Range(0,4); //Turkuaz,Sarı,Kırmızı,Mor
