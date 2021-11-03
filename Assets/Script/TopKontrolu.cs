@@ -30,6 +30,12 @@ public class TopKontrolu : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "RenkTekeri")
+        {
+            RastgeleRenkBelirle();
+            Destroy(collision.gameObject); //coolsion olan objeyi yok et
+        }
+        
         if(collision.tag != mevcutRenk)
         {
           Debug.Log("oldu");
