@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TopKontrolu : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class TopKontrolu : MonoBehaviour
         
         if(collision.tag != mevcutRenk)
         {
+          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //SceneManager.LoadScene() da yazabilirdik.  
           Debug.Log("oldu");
           //  Destroy(gameObject);
         }
