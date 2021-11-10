@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TopKontrolu : MonoBehaviour
 {
@@ -13,10 +14,13 @@ public class TopKontrolu : MonoBehaviour
     public Color mor;
 
     private Color topunRengi;
+    public Text skorYazisi;
+    public static int skor = 0; //static=> sahneler arası geçişlerda korunma
     void Start()
     {
         RastgeleRenkBelirle();
         //topunRengi = GetComponent<SpriteRenderer>().color;
+        skorYazisi.text = skor.ToString();
 
     }
 
@@ -31,14 +35,24 @@ public class TopKontrolu : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.tag == "SkorArttir")
+        {
+            skor += 50;
+            skorYazisi.text = skor.ToString();
+            Destroy(collision.gameObject);
+        }
         if(collision.tag == "RenkTekeri")
         {
             RastgeleRenkBelirle();
             Destroy(collision.gameObject); //coolsion olan objeyi yok et
+            return; //ilgili tag bulduktan sonra trigger çık
         }
         
-        if(collision.tag != mevcutRenk)
+        if(collision.tag != mevcutRenk && collision.tag != "SkoruArttir")
         {
+          skor = 0;
+          skorYazisi.text = skor.ToString();  
+
           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //SceneManager.LoadScene() da yazabilirdik.  
           Debug.Log("oldu");
           //  Destroy(gameObject);
