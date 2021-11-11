@@ -16,6 +16,8 @@ public class TopKontrolu : MonoBehaviour
     private Color topunRengi;
     public Text skorYazisi;
     public static int skor = 0; //static=> sahneler arası geçişlerda korunma
+    public GameObject Cember;
+    public GameObject RenkTekeri;
     void Start()
     {
         RastgeleRenkBelirle();
@@ -39,12 +41,16 @@ public class TopKontrolu : MonoBehaviour
         {
             skor += 50;
             skorYazisi.text = skor.ToString();
+
+            Instantiate(Cember, new Vector3(transform.position.x, transform.position.y +6f, transform.position.z),transform.rotation);
             Destroy(collision.gameObject);
+
         }
         if(collision.tag == "RenkTekeri")
         {
             RastgeleRenkBelirle();
             Destroy(collision.gameObject); //coolsion olan objeyi yok et
+             Instantiate(RenkTekeri, new Vector3(transform.position.x, transform.position.y +6f, transform.position.z),transform.rotation);
             return; //ilgili tag bulduktan sonra trigger çık
         }
         
